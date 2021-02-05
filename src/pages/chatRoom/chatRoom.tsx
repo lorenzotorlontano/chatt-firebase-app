@@ -2,6 +2,7 @@ import React , {useState , useRef} from 'react'
 import  firebase  from 'firebase/app';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { ChatMessage } from '../../components/ChatMessage/ChatMessage';
+import SignOut from '../../components/SignOut/SignOut';
 
 interface refTypeDummy {
     dummy : any;
@@ -32,6 +33,8 @@ export default function ChatRoom() {
     }
 
     return(
+        <>
+        <SignOut/>
         <div>
             <div>
                 {messages && messages.map((msg : any) => <ChatMessage key={msg.id} message={msg} />)}
@@ -42,7 +45,8 @@ export default function ChatRoom() {
                 <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Say something" />
                 <button type="submit" disabled={!formValue}>send</button>
             </form>
+
       </div>
-  
+        </>
     );
 }

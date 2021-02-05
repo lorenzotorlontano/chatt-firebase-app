@@ -7,7 +7,6 @@ import {
 } from "@react-firebase/auth";
 import { useHistory } from 'react-router-dom';
 
-
 const SignInComponent = () => {
 
     let history = useHistory();
@@ -16,7 +15,6 @@ const SignInComponent = () => {
         const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(googleAuthProvider).then((data : any)=> history.push('/chatRoom'));
     }
-
     return (
         <FirebaseAuthProvider {...firebaseConfig} firebase={firebase}>
         <div>
