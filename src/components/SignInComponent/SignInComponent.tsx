@@ -25,8 +25,8 @@ const SignInComponent = () => {
           >
             Sign In with Google
           </button>
-          </div>
-          </FirebaseAuthProvider>
+        </div>
+        </FirebaseAuthProvider>
     );
 }
 

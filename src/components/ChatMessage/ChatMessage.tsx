@@ -7,8 +7,6 @@ export function ChatMessage(props : any) {
             <div style={{paddingRight : "10px"}}>
                 <img style={{width : '20px'}} src={photoURL}  />
             </div>
-
-                {/* <p>{user}</p> */}
                <div> <p>{body}</p></div>
             </div>
         </>
